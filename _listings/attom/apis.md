@@ -12,11 +12,26 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28881-api-
 x-kinRank: "7"
 x-alexaRank: "359677"
 tags: Attendees
-created: "2018-08-25"
-modified: "2018-08-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/attom/apis.md
 specificationVersion: "0.14"
 apis:
+- name: Attom Data Solutions API - Return schools within the attendance boundary of
+    a property.
+  x-api-slug: propertydetailwithschools-get
+  description: Search for a property to have the property details returned, along
+    with the schools in the associated attendance zones.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28881-api-developer-attomdata-com.jpg
+  humanURL: https://api.developer.attomdata.com
+  baseURL: https://search.onboard-apis.com//communityapi/v2.0.0
+  tags: SaaS, Technology, Enterprise, Real Estate, Places, Schools, Properties, General
+    Data, Historical Data API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/attom/propertydetailwithschools-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/attom/propertydetailwithschools-get-openapi.md
 - name: Attom Data Solutions API - Return schools within the attendance boundary of
     a property.
   x-api-slug: propertydetailwithschools-get

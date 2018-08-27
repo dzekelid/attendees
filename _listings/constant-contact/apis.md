@@ -7,8 +7,8 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/171-consta
 x-kinRank: "7"
 x-alexaRank: "1364"
 tags: Attendees
-created: "2018-08-25"
-modified: "2018-08-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/constant-contact/apis.md
 specificationVersion: "0.14"
 apis:
@@ -68,6 +68,34 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/constant-contact/usernameeventseventidregistrantsregistrantidattendancestatus-put-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/constant-contact/usernameeventseventidregistrantsregistrantidattendancestatus-put-openapi.md
+- name: Constant Contact - Update Attendance Status
+  x-api-slug: usernameeventseventidregistrantsregistrantidattendancestatus-put
+  description: Update Attendance Status
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/171-constant-contact.jpg
+  humanURL: http://blogs.constantcontact.com
+  baseURL: https://api.constantcontact.com//ws/customers/
+  tags: Social Media Marketing, Email Marketing, CRM, Federal Government, Federal
+    Government, Federal Government, Federal Government, Getting Started Example, SaaS,
+    Technology, API Provider, Surveys, Emails, Profiles, Service API, Relative Data
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/constant-contact/usernameeventseventidregistrantsregistrantidattendancestatus-put-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/constant-contact/usernameeventseventidregistrantsregistrantidattendancestatus-put-openapi.md
+- name: Constant Contact - Get Attendance Status
+  x-api-slug: usernameeventseventidregistrantsregistrantidattendancestatus-get
+  description: Get Attendance Status
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/171-constant-contact.jpg
+  humanURL: http://blogs.constantcontact.com
+  baseURL: https://api.constantcontact.com//ws/customers/
+  tags: Social Media Marketing, Email Marketing, CRM, Federal Government, Federal
+    Government, Federal Government, Federal Government, Getting Started Example, SaaS,
+    Technology, API Provider, Surveys, Emails, Profiles, Service API, Relative Data
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/constant-contact/usernameeventseventidregistrantsregistrantidattendancestatus-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/constant-contact/usernameeventseventidregistrantsregistrantidattendancestatus-get-openapi.md
 x-common:
 - type: x--net-library
   url: https://github.com/constantcontact/.net-sdk

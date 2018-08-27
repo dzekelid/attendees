@@ -1,4 +1,3 @@
----
 swagger: "2.0"
 x-collection-name: Constant Contact
 x-complete: 1
@@ -15,4 +14,44 @@ produces:
 - application/json
 consumes:
 - application/json
----
+paths:
+  /{username}/events/{event-id}/registrants/{registrant-id}/attendancestatus:
+    get:
+      summary: Get Attendance Status
+      description: Get Attendance Status
+      operationId: get-attendance-status
+      x-api-path-slug: usernameeventseventidregistrantsregistrantidattendancestatus-get
+      parameters:
+      - in: path
+        name: event-id
+      - in: path
+        name: registrant-id
+      - in: path
+        name: username
+      responses:
+        200:
+          description: OK
+      tags:
+      - Attendance
+      - Status
+    put:
+      summary: Update Attendance Status
+      description: Update Attendance Status
+      operationId: update-attendance-status
+      x-api-path-slug: usernameeventseventidregistrantsregistrantidattendancestatus-put
+      parameters:
+      - in: query
+        name: Content-Type
+        description: Specifies Content Type
+      - in: path
+        name: event-id
+      - in: path
+        name: registrant-id
+      - in: path
+        name: username
+      responses:
+        200:
+          description: OK
+      tags:
+      - Attendance
+      - Status

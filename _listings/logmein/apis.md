@@ -8,11 +8,49 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-
 x-kinRank: "7"
 x-alexaRank: "7271"
 tags: Attendees
-created: "2018-08-25"
-modified: "2018-08-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/apis.md
 specificationVersion: "0.14"
 apis:
+- name: GoToAssist Remote Support - Start Attended Session in Browser
+  x-api-slug: session-get
+  description: "This method allows a partner system to launch an attended support
+    session within a browser window. This API does not require authentication, so
+    the technician will be prompted to enter their credentials when they run the GoToAssist
+    Expert desktop application for the first time. Since the technician is not required
+    to navigate to a URL, no API is implemented to create the session. Note: This
+    method was formerly named \"Create Attended Session in browser,\" but has been
+    renamed.\n\n  Request Parameters                    \n                      \n
+    \   field        data type      description    \n    sessionType        string
+    \     The type of session to create (only \"SCREEN_SHARING\" can be used at this
+    time).    \n    layout*        string      The style of HTML that will be displayed
+    when starting the session (e.g., \"iFrame\"). If this parameter is not present,
+    then the HTML will fill the entire browser window.    \n    partnerObject*        string
+    \     The ID of object in the partner system that this session will be associated
+    with.    \n    partnerObjectUrl*        string      The URL that may be used in
+    the GoToAssist Expert desktop application if the technician wants to view the
+    partner object. Note: The URL can be used in a popup window or iframe that is
+    600 pixels wide and 500 pixels wide. For example, a popup window could be created
+    with HTML code as follows: Start Remote Support     \n    sessionStatusCallbackUrl*
+    \       string      The URL that will receive a POST when the session status changes.
+    A POST will also be made to the sessionStatusCallbackUrl when a customer joins
+    the session and when the session ends (whether or not a customer joined). The
+    contents of the POST will be similar as the GET /v1/sessions/ API. Note: The ID
+    of the session is not known until the session is actually started on the endpoint.
+    If the URL is not specified or the session is never started (e.g., if the customer
+    cancels the installation of the GoToAssist Customer desktop application), then
+    the callback will not be made.    \n                      \n* Optional parameters"
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2A/rest/v1
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/session-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/session-get-openapi.md
 - name: GoToAssist Remote Support - Start Attended Session in Browser
   x-api-slug: session-get
   description: "This method allows a partner system to launch an attended support
@@ -137,6 +175,32 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/groupsgroupkeyattendees-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/groupsgroupkeyattendees-get-openapi.md
+- name: GoToTraining API - Get Attendance Details
+  x-api-slug: reportsorganizersorganizerkeysessionssessionkeyattendees-get
+  description: Get attendance details.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2T/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/reportsorganizersorganizerkeysessionssessionkeyattendees-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/reportsorganizersorganizerkeysessionssessionkeyattendees-get-openapi.md
+- name: GoToTraining API - Get Attendance Details
+  x-api-slug: reportsorganizersorganizerkeysessionssessionkeyattendees-get
+  description: Get attendance details.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2T/rest
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/reportsorganizersorganizerkeysessionssessionkeyattendees-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/reportsorganizersorganizerkeysessionssessionkeyattendees-get-openapi.md
 - name: GoToTraining API - Get Attendance Details
   x-api-slug: reportsorganizersorganizerkeysessionssessionkeyattendees-get
   description: Get attendance details.
@@ -293,6 +357,110 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get-openapi.md
+- name: GoToWebinar API - Get attendee poll answers
+  x-api-slug: organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get
+  description: Get attendee poll answers.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2W/rest/organizers
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get-openapi.md
+- name: GoToWebinar API - Get attendee poll answers
+  x-api-slug: organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get
+  description: Get attendee poll answers.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2W/rest/organizers
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeypolls-get-openapi.md
+- name: GoToWebinar API - Get attendee survey answers
+  x-api-slug: organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get
+  description: Get attendee survey answers.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2W/rest/organizers
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get-openapi.md
+- name: GoToWebinar API - Get attendee survey answers
+  x-api-slug: organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get
+  description: Get attendee survey answers.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2W/rest/organizers
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeysurveys-get-openapi.md
+- name: GoToWebinar API - Get attendee questions
+  x-api-slug: organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get
+  description: Get attendee questions.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2W/rest/organizers
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get-openapi.md
+- name: GoToWebinar API - Get attendee questions
+  x-api-slug: organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get
+  description: Get attendee questions.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2W/rest/organizers
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkeyquestions-get-openapi.md
+- name: GoToWebinar API - Get attendee
+  x-api-slug: organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get
+  description: Get attendee.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2W/rest/organizers
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get-openapi.md
+- name: GoToWebinar API - Get attendee
+  x-api-slug: organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get
+  description: Get attendee.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28873-www-logmeininc-com.jpg
+  humanURL: http://www.LogMeInInc.com
+  baseURL: https://api.getgo.com//G2W/rest/organizers
+  tags: SaaS, Technology, Enterprise, Voice, Videoconferencing, Audio, Webinars, Relative
+    Data, Service API
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/attendees/master/_listings/logmein/organizerkeywebinarswebinarkeysessionssessionkeyattendeesregistrantkey-get-openapi.md
 x-common:
 - type: x-github
   url: https://github.com/logmein
